@@ -11,8 +11,7 @@ import SwiftUI
 struct MainView : View {
     @State private var searchText: String = ""
     @State private var showSearchField: Bool = false
-    
-    var keyboardHeight: CGFloat = 0.0
+    @State private var keyboardHeight: CGFloat = 0.0
     
     var body: some View {
         ZStack(alignment: .trailing) {
@@ -25,27 +24,21 @@ struct MainView : View {
                         .shadow(color: Color.black, radius: 3.0, x: 0.0, y: 2.0)
                     HStack {
                         if showSearchField {
-                            TextField($searchText, placeholder: Text("Search"), onEditingChanged: { isEditing in
-                                print(isEditing)
-                                print(self.searchText)
-                            }, onCommit: {
-                                print(self.searchText)
-                            }).disabled(!showSearchField).clipped().padding()
+                            CustomTextField(text: $searchText, keyboardHeight: $keyboardHeight, isFirstResponder: showSearchField).relativeHeight(0.0).padding()
                         }
                         Button(action: {
                             withAnimation(.basic(duration: 0.25, curve: .easeInOut)) {
                                 self.showSearchField.toggle()
+                                if !self.showSearchField {
+                                self.keyboardHeight = 0.0
+                                }
                             }
                         }) {
                             Text("🔎")
-                            }.frame(width: 50, height: 50, alignment: .center)
+                            }.frame(width: 50, height: 50, alignment: .center).layoutPriority(1.0)
                     }.layoutPriority(1.0)
-                }.padding()
-                
-                if showSearchField {
-                    Spacer(minLength: keyboardHeight)
-                }
-            }
+                    }.offset(x: 0.0, y: -keyboardHeight).padding()
+                }.edgesIgnoringSafeArea(showSearchField ? [ .bottom ] : [])
         }
     }
 }

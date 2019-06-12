@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B58A458222AAAE45003AC8E1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A458122AAAE45003AC8E1 /* MainViewController.swift */; };
+		B5716D0E22B119AA0093646F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5716D0D22B119AA0093646F /* CustomTextField.swift */; };
 		B5E5232522A7DBC5000635EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5232422A7DBC5000635EE /* AppDelegate.swift */; };
 		B5E5232722A7DBC5000635EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5232622A7DBC5000635EE /* SceneDelegate.swift */; };
 		B5E5232922A7DBC5000635EE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5232822A7DBC5000635EE /* MapView.swift */; };
@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B58A458122AAAE45003AC8E1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B5716D0D22B119AA0093646F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B5E5232122A7DBC5000635EE /* MapsAOPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsAOPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E5232422A7DBC5000635EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E5232622A7DBC5000635EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 				B5E5232422A7DBC5000635EE /* AppDelegate.swift */,
 				B5E5232622A7DBC5000635EE /* SceneDelegate.swift */,
 				B5E5232822A7DBC5000635EE /* MapView.swift */,
+				B5716D0D22B119AA0093646F /* CustomTextField.swift */,
 				B5E5235522A7EDE0000635EE /* MainView.swift */,
-				B58A458122AAAE45003AC8E1 /* MainViewController.swift */,
 				B5E5235722A7F365000635EE /* MapMenuView.swift */,
 			);
 			path = Classes;
@@ -313,8 +313,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5716D0E22B119AA0093646F /* CustomTextField.swift in Sources */,
 				B5E5235822A7F365000635EE /* MapMenuView.swift in Sources */,
-				B58A458222AAAE45003AC8E1 /* MainViewController.swift in Sources */,
 				B5E5232522A7DBC5000635EE /* AppDelegate.swift in Sources */,
 				B5E5237D22AA4B00000635EE /* CustomKeyboardHandler.swift in Sources */,
 				B5E5235622A7EDE0000635EE /* MainView.swift in Sources */,
